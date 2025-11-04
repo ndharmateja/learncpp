@@ -14,6 +14,7 @@
                 "-Wextra",
                 "-Wconversion",
                 "-Wsign-conversion",
+                "-std=c++20",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
