@@ -1,4 +1,7 @@
 **/*.dSYM/
 **/.qodo/
 **/a.out
+**/main
+**/.o
+**/.s
 **/.DS_Store
