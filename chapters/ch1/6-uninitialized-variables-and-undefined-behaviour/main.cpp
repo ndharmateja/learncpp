@@ -1,5 +1,10 @@
 #include <iostream>
 
+void nothing(int &x)
+{
+    std::cout << x << std::endl; // Can produce garbage
+}
+
 int main()
 {
     // Initialized = The object is given a known value at the point of definition.
@@ -9,6 +14,10 @@ int main()
     // Best practice: you should always initialize your variables because the cost of doing so is minuscule compared to the benefit
     // Uninitialized variables can be one of the most challenging to debug (because the program may run fine anyway if the uninitialized variable happened to get assigned to a spot of memory that had a reasonable value in it, like 0).
     int x;
+
+    // To avoid compiler warnings, we make it seem like we are assigning a value to x
+    nothing(x);
+
     std::cout << x << std::endl; // Can produce garbage
 
     // Undefined behavior
